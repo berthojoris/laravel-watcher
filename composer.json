@@ -1,0 +1,57 @@
+{
+    "name": "berthojoris/laravel-watcher",
+    "description": "Self-hosted Laravel monitoring agent with microsecond precision tracing. A Nightwatch alternative.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "monitoring",
+        "nightwatch",
+        "tracing",
+        "apm",
+        "agent",
+        "telemetry",
+        "observability"
+    ],
+    "authors": [
+        {
+            "name": "berthojoris"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/http": "^10.0|^11.0|^12.0",
+        "illuminate/events": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Berthojoris\\Watcher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Berthojoris\\Watcher\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Berthojoris\\Watcher\\WatcherServiceProvider"
+            ],
+            "aliases": {
+                "Watcher": "Berthojoris\\Watcher\\Facades\\Watcher"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
